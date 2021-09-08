@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 
 import styled from 'styled-components';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -132,47 +132,19 @@ const HeaderBanner = () => {
                 </Arrow>
                 
                     <BannerWrapper>
-                        <Slide bg="#7d0719"> 
+                        <Slide bg=""> 
                             <ImgContainer>
-                                <Image src="https://images.unsplash.com/photo-1586377353855-8716dcf714a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"/>
+                                <Image src=""/>
                             </ImgContainer>
                         <InfoContainer>
 
-                            <Title> Fall Collection </Title>
-                            <Description> Fall is upon us, get the look with this brand new collection</Description>
+                            <Title>  </Title>
+                            <Description> </Description>
                             <Button>Shop Now</Button>
                         </InfoContainer>
 
                         </Slide>
 
-
-                        {/* slide 2 */}
-                        <Slide bg="#000"> 
-                            <ImgContainer>
-                                <Image src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"/>
-                            </ImgContainer>
-                        <InfoContainer>
-
-                            <Title> Popular Picks </Title>
-                            <Description> Dive into our popular sellers and get creative!</Description>
-                            <Button>Take A Look</Button>
-                        </InfoContainer>
-
-                        </Slide>
-
-                        {/* slide 3 */}
-                        <Slide bg="#04918d"> 
-                            <ImgContainer>
-                                <Image src="https://images.unsplash.com/photo-1587754153294-bb3b95aa9769?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80"/>
-                            </ImgContainer>
-                        <InfoContainer>
-
-                            <Title> Fall Collection </Title>
-                            <Description> Fall is upon us, get the look with this brand new collection</Description>
-                            <Button>Shop Now</Button>
-                        </InfoContainer>
-
-                        </Slide>
                     </BannerWrapper>
 
                 <Arrow direction="right" onClick={() => handleClick("right")}>
