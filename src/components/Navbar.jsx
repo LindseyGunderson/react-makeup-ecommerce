@@ -62,7 +62,7 @@ const Navbar = () => {
         <Container>
 
             <Wrapper>
-                <Logo>LOGO</Logo>
+                <Logo>Such Co.</Logo>
                     <SearchContainer>
                         <Input/>
                         <Search />
