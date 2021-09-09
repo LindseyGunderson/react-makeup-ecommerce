@@ -30,3 +30,32 @@ export const bannerItems =
     }
 
 ]
+
+export const categories = [
+
+    {
+
+        id: 1,
+        img: "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1066&q=80", 
+        title: "Lipsticks",
+
+    },
+
+    {
+
+        id: 2,
+        img: "https://images.unsplash.com/photo-1503236823255-94609f598e71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80", 
+        title: "Eye Shadows",
+
+    },
+
+    {
+
+        id: 3,
+        img: "https://images.unsplash.com/photo-1619168213439-8af6b0fd5956?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=651&q=80", 
+        title: "Mascara",
+
+    },
+
+    
+]
