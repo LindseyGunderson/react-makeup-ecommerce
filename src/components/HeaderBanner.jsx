@@ -1,8 +1,9 @@
-import {React, useState} from 'react';
+import {useState} from 'react';
 
 import styled from 'styled-components';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import {bannerItems} from '../data';
 
 const Container = styled.div`
 
@@ -21,6 +22,8 @@ const BannerWrapper = styled.div`
 
     height: 100%;
     display: flex;
+    transition: all 1.2s ease-in-out;
+    transform: translateX(${(props) => props.slideIndex * -100}vw);
 
 `;
 
@@ -30,7 +33,7 @@ const Arrow = styled.div`
     width: 40px;
     height: 60px;
     background-color: #000;
-    border-radius: 10px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,8 +42,8 @@ const Arrow = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    left: ${props=>props.direction === "left" && "10px"};
-    right: ${props=>props.direction === "right" && "10px"};
+    left: ${(props)=>props.direction === "left" && "10px"};
+    right: ${(props)=>props.direction === "right" && "10px"};
 
     margin: auto;
     cursor: pointer;
@@ -55,7 +58,7 @@ const Slide = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: ${props=>props.bg};
+    background-color: ${(props) => props.bg};
 
 `;
 const ImgContainer = styled.div`
@@ -111,12 +114,24 @@ const Button = styled.button`
 
 const HeaderBanner = () => {
 
-    const [slideIndex, setSlideIndex] = useState();
+    const [slideIndex, setSlideIndex] = useState(0);
 
 
     // handle arrows for slider
-    const handleClick = () => {
+    const handleClick = (direction) => {
 
+        if(direction === "left"){
+
+            //if the current slide is greater than 0, go to the next slide or the last slide
+            setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+        }
+        else {
+
+            // move to right
+            // if the current slide is less than 2 (which is our last slide), go to the next slide.
+            setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+
+        }
 
 
     }
@@ -131,19 +146,24 @@ const HeaderBanner = () => {
                     <ArrowBackIosIcon/>
                 </Arrow>
                 
-                    <BannerWrapper>
-                        <Slide bg=""> 
+                    <BannerWrapper slideIndex={slideIndex}>
+
+                        { bannerItems.map(item=> (
+
+                       
+                        <Slide bg={item.bg}> 
                             <ImgContainer>
-                                <Image src=""/>
+                                <Image src={item.img}/>
                             </ImgContainer>
                         <InfoContainer>
 
-                            <Title>  </Title>
-                            <Description> </Description>
+                            <Title> {item.title}  </Title>
+                            <Description> {item.desc}  </Description>
                             <Button>Shop Now</Button>
                         </InfoContainer>
 
                         </Slide>
+                         )) }
 
                     </BannerWrapper>
 
