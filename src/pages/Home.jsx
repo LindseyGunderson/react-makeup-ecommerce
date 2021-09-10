@@ -5,6 +5,7 @@ import HeaderBanner from '../components/HeaderBanner';
 import Navbar from '../components/Navbar';
 import Categories from '../components/Categories';
 import Products from '../components/Products';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Categories />
             <Products />
 
+            <Footer />
         </div>
     )
 }
