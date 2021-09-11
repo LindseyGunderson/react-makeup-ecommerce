@@ -63,7 +63,7 @@ const AddContainer = styled.div`
     align-items: center;
     justify-content: space-between;
 
-`;
+`
 
 const AmountContainer = styled.div`
 
