@@ -4,6 +4,8 @@ import Advertisement from "../components/Advertisement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
+import {mobile} from '../responsive';
+
 import { Add, Remove} from '@material-ui/icons'
 
 const Container = styled.div``;
@@ -12,6 +14,8 @@ const Wrapper = styled.div`
 
     padding: 50px;
     display: flex;
+
+    ${mobile({ flexDirection: "column", padding: "20px" })}
 
 `;
 
@@ -27,6 +31,7 @@ const Image = styled.img`
     width: 100%;
     height: 80vh;
     object-fit: cover;
+    ${mobile({ height: "40vh" })}
 
 `;
 
@@ -35,11 +40,14 @@ const InfoContainer = styled.div`
     flex: 1;
     padding: 0 50px;
 
+    ${mobile({ padding: "0 20px", textAlign: "center" })}
+
 `;
 
 const Title = styled.h1`
 
     font-weight: 200;
+
 
 `;
 const Desc = styled.p`
@@ -62,6 +70,8 @@ const AddContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    ${mobile({ flexDirection: "column", width: "100%" })}
 
 `
 
@@ -103,6 +113,10 @@ const Button = styled.button`
 
 
     }
+
+
+    ${mobile({ margin: "20px", width: "100%" })}
+    
 
 `;
 

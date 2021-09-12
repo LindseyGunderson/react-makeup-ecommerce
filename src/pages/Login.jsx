@@ -1,6 +1,8 @@
 
 import styled from "styled-components";
 
+import {mobile} from '../responsive';
+
 const Container = styled.div`
 
     width: 100vw;
@@ -21,6 +23,8 @@ const Wrapper = styled.div`
     background-color: #fff;
     border: 2px solid teal;
     text-align: center;
+
+    ${mobile({ width: "90%" })}
 
 `;
 
@@ -58,6 +62,8 @@ const Button = styled.button`
     padding: 15px 20px;
     background-color: pink;
     color: gray;
+
+    ${mobile({ width: "100%" })}
 
 `;
 

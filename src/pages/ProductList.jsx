@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import Products from '../components/Products';
 import Footer from '../components/Footer';
 
+import {mobile} from '../responsive';
+
 const Container = styled.div`
 
 `;
@@ -27,6 +29,8 @@ const Filter = styled.div`
 
     margin: 20px;
 
+    ${mobile({ margin: "5px 24px" })}
+
 `;
 
 const FilterText = styled.span`
@@ -34,6 +38,7 @@ const FilterText = styled.span`
     font-size: 20px;
     font-weight: 600;
     margin-right: 20px;
+    ${mobile({ fontSize: "18px", marginRight: "0" })}
 `;
 
 const Select = styled.select`

@@ -1,12 +1,15 @@
 
 import styled from "styled-components"
 import { Facebook, Instagram, Twitter } from '@material-ui/icons';
+import {mobile} from '../responsive';
 
 const Container = styled.div`
 
     display: flex;
     flex: 1;
     background-color: pink;
+
+    ${mobile({ flexDirection: "column", textAlign: "center" })}
 
 `;
 
@@ -54,6 +57,7 @@ const Center = styled.div`
 
     flex: 1;
     padding: 20px;
+    ${mobile({ display: "none" })}
 
 `;
 

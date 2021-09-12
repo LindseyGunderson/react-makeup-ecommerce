@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Advertisement from "../components/Advertisement";
 import Navbar from "../components/Navbar";
 
+import {mobile} from '../responsive';
+
 const Container = styled.div`
 
     width: 100vw;
@@ -23,6 +25,8 @@ const Wrapper = styled.div`
     border: 2px solid teal;
     text-align: center;
 
+    ${mobile({ width: "90%" })}
+
 `;
 
 const Title = styled.h1`
@@ -38,6 +42,7 @@ const Form = styled.form`
     display: flex;
     flex-wrap: wrap;
 
+    ${mobile({ flexDirection: "column"})}
 `;
 
 
@@ -47,6 +52,8 @@ const Input = styled.input`
     min-width: 40%;
     margin: 20px 10px 0 0;
     padding: 10px;
+
+    ${mobile({ margin: "15px 8px 0 0" })}
 `;
 
 const Agreement = styled.span`
@@ -65,6 +72,8 @@ const Button = styled.button`
     padding: 15px 20px;
     background-color: pink;
     color: gray;
+
+    ${mobile({ width: "100%" })}
 
 `;
 

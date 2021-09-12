@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 
+import {mobile} from '../responsive';
 const Container = styled.div`
 
 `;
@@ -11,6 +12,10 @@ const Container = styled.div`
 const Wrapper = styled.div`
 
     padding: 20px;
+
+
+   
+
 `;
 
 const Title = styled.h1`
@@ -54,6 +59,8 @@ const Bottom = styled.div`
 
     display: flex;
     justify-content: space-between;
+    
+    ${mobile({ flexDirection: "column" })}
 
 `;
 
@@ -62,6 +69,8 @@ const Info = styled.div`
 
     flex: 3;
 
+
+    ${mobile({ flex: "1" })}
 `;
 
 // cart product components
@@ -71,19 +80,22 @@ const Product = styled.div`
     display: flex;
     justify-content: space-between;
 
+    ${mobile({ flexDirection: "column" })}
 
 `;
 
 const ProductDetail = styled.div`
 
-display: flex;
+    display: flex;
     flex: 2;
 
+    ${mobile({ flex: "1", flexDirection:"column", alignItems: "center" })}
 `;
 
 const Image = styled.img`
 
     width: 200px;
+
 `;
 
 const Details = styled.div`
@@ -93,10 +105,10 @@ const Details = styled.div`
     flex-direction: column;
     justify-content: space-around;
 
+
 `;
 
 const ProductName = styled.span``;
-const ProductID = styled.span``;
 
 const PriceDetail = styled.div`
 
@@ -105,6 +117,8 @@ const PriceDetail = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: center;
+
+    ${mobile({alignItems: "center", marginBottom: "10px"})}
 
 `;
 
@@ -137,6 +151,8 @@ const HR = styled.hr`
     border:none;
     height: 1px;
 
+    ${mobile({margin: "20px"})}
+
 `;
 
 // summary components
@@ -153,6 +169,8 @@ const Summary = styled.div`
 const SummaryTitle = styled.h1`
 
     font-weight: 200;
+
+    ${mobile({textAlign: "center"})}
 
 `;
 
@@ -206,9 +224,9 @@ const Cart = () => {
                     <Product>
                         <ProductDetail>
                             <Image src="https://images.unsplash.com/photo-1584051022121-6ee465f21b5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"/>
+
                             <Details>
                                 <ProductName><b>Product: </b>Max Lash Mascara</ProductName>
-                                <ProductID><b>ID: </b>74147546</ProductID>
                             </Details>
 
                         </ProductDetail>
@@ -231,7 +249,6 @@ const Cart = () => {
                             <Image src="https://images.unsplash.com/photo-1584051022121-6ee465f21b5d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"/>
                             <Details>
                                 <ProductName><b>Product: </b>Max Lash Mascara</ProductName>
-                                <ProductID><b>ID: </b>74147546</ProductID>
                             </Details>
 
                         </ProductDetail>

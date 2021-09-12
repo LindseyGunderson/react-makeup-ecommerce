@@ -5,6 +5,8 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import {bannerItems} from '../data';
 
+import {mobile} from '../responsive';
+
 const Container = styled.div`
 
     width: 100%;
@@ -14,6 +16,8 @@ const Container = styled.div`
     color: #fff;
     position: relative;
     overflow: hidden;
+
+    ${mobile({ display: "none" })}
 
 `;
 
